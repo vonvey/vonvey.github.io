@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+<html xmlns:wb="http://open.weibo.com/wb">
 <html>
-
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="description" content="Vonvey&#39;s Blog : Welcome">
     <meta property="wb:webmaster" content="4f7365a7a28a9afa" />
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=702507182&debug=true" type="text/javascript" charset="utf-8"></script>
 
     <title>Vonvey.com</title>
   </head>
@@ -39,7 +40,25 @@
       </footer>
     </div>
     -->
+    <wb:share-button type="button" size="middle"> </wb:share-button>
     
+    <div id="wb_connect_btn"></div>
 
+  <script type="text/javascript">
+    WB2.anyWhere(function (W) {
+    W.widget.connectButton({
+        id: "wb_connect_btn",
+        type: '3,2',
+        callback: {
+            login: function (o) { //登录后的回调函数
+                alert("login: " + o.screen_name)
+            },
+            logout: function () { //退出后的回调函数
+                alert('logout');
+            }
+        }
+    });
+});
+  </script>
   </body>
 </html>
