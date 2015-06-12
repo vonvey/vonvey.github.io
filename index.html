@@ -60,5 +60,16 @@
     });
 });
   </script>
+  
+  <button type="button" id="wb_publish"></wb:button>
+  WB2.anyWhere(function(W){
+    W.widget.publish({
+        'id' : 'wb_publish',
+        'default_text' : 'from vonvey.com',
+        'callback' : function(o) {
+            //do something...
+        }
+    });
+});
   </body>
 </html>
