@@ -15,15 +15,6 @@
   <body>
 
     <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/vonvey">View on GitHub</a>
-
-          <h1 id="project_title">Welcome to Vonvey.com</h1>
-          <!--<h2 id="project_tagline">Unknow</h2>-->
-
-        </header>
-    </div>
 
     <!-- MAIN CONTENT 
     <div id="main_content_wrap" class="outer">
@@ -40,38 +31,6 @@
       </footer>
     </div>
     -->
-    <wb:share-button type="button" size="middle"> </wb:share-button>
-    
-    <div id="wb_connect_btn"></div>
 
-  <script type="text/javascript">
-    WB2.anyWhere(function (W) {
-    W.widget.connectButton({
-        id: "wb_connect_btn",
-        type: '3,2',
-        callback: {
-            login: function (o) { //登录后的回调函数
-                alert("login: " + o.screen_name)
-            },
-            logout: function () { //退出后的回调函数
-                alert('logout');
-            }
-        }
-    });
-});
-  </script>
-  
-  <button type="button" id="wb_publish"></wb:button>
-  <script>
-  WB2.anyWhere(function(W){
-    W.widget.publish({
-        'id' : 'wb_publish',
-        'default_text' : 'from vonvey.com',
-        'callback' : function(o) {
-            //do something...
-        }
-    });
-});
-</script>
   </body>
 </html>
