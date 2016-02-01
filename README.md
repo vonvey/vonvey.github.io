@@ -1,2 +1,2 @@
 # vonvey.github.io
-blog vonvey.com
+vonvey.com
